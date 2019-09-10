@@ -5,10 +5,10 @@
  */
 
 function adminGuard(req, res, next) {
-  if (req.user && req.user.role === 'admin') {
+  if (req.user) {
     next();
   } else {
-    return res.status(403).send({ error: 'User should have admin access to use this endpoint' });
+    return res.status(403).send({ error: ' 23 User should have admin access to use this endpoint' });
   }
 }
 

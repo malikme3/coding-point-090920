@@ -5,7 +5,7 @@
  */
 export const environment = {
   production: true,
-  apiUrl: 'https://bundle-demo-api.azurewebsites.net/api',
+  apiUrl: 'http://localhost:3001/api',
   testUser: {
     token: {},
     email: '',
