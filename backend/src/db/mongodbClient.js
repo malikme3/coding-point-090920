@@ -1,6 +1,6 @@
 /*
  * Copyright (c) Akveo 2019. All Rights Reserved.
- * Licensed under the Single Application / Multi Application License. 
+ * Licensed under the Single Application / Multi Application License.
  * See LICENSE_SINGLE_APP / LICENSE_MULTI_APP in the 'docs' folder for license information on type of purchased license.
  */
 
@@ -15,12 +15,13 @@ module.exports = function getMongoDBClient() {
     return dbClient;
   }
   logger.info('Connecting to MongoDB client...');
+  const url1 = 'mongodb+srv://rrcp:asadmalik@cp360-6pik6.mongodb.net/test?retryWrites=true&w=majority';
 
-  const { url, name } = config.get('db');
-  dbClient = mongoClient.connect(url, { useNewUrlParser: true })
+  dbClient = mongoClient
+    .connect(url1, { useNewUrlParser: true })
     .then(client => {
       logger.info('MongoDB client has been successfully created');
-      return client.db(name);
+      return client.db('test');
     })
     .catch(err => {
       logger.error(`Error occurred while connecting to mongodb: ${err}`);
