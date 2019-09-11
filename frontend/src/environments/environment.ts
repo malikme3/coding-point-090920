@@ -5,7 +5,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3001/api',
+  apiUrl: 'http://localhost:8080/api',
   testUser: {
     // tslint:disable
     token:

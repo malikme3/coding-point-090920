@@ -1,4 +1,3 @@
-
 const mongoClient = require('mongodb').MongoClient;
 const config = require('config');
 const logger = require('../utils/logger');
@@ -16,7 +15,7 @@ module.exports = function getMongoDBClient() {
     .connect(url1, { useNewUrlParser: true })
     .then(client => {
       logger.info('MongoDB client has been successfully created');
-      return client.db('test');
+      return client.db('cp360');
     })
     .catch(err => {
       logger.error(`Error occurred while connecting to mongodb: ${err}`);
