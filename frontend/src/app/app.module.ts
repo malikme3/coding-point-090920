@@ -1,8 +1,3 @@
-/*
- * Copyright (c) Akveo 2019. All Rights Reserved.
- * Licensed under the Single Application / Multi Application License.
- * See LICENSE_SINGLE_APP / LICENSE_MULTI_APP in the 'docs' folder for license information on type of purchased license.
- */
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, Injector, APP_INITIALIZER } from '@angular/core';
@@ -29,8 +24,7 @@ export function init_app(injector: Injector) {
   return () =>
     new Promise<any>((resolve: Function) => {
       const initUserService = injector.get(InitUserService);
-      initUserService.initCurrentUser().subscribe(() => { },
-        () => resolve(), () => resolve()); // place for error logging
+      initUserService.initCurrentUser().subscribe(() => {}, () => resolve(), () => resolve()); // place for error logging
     });
 }
 
@@ -66,5 +60,4 @@ export function init_app(injector: Injector) {
     },
   ],
 })
-export class AppModule {
-}
+export class AppModule {}
